@@ -21,7 +21,7 @@ public class GameManager {
 
     public void pop(){
 
-        //stages.peek().dispose();
+        stages.peek().dispose();
         stages.pop();
     }
 

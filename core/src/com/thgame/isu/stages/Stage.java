@@ -78,7 +78,7 @@ public abstract class Stage{
         }
     }
 
-    /*public void dispose(){
+    public void dispose(){
         this.dispose();
-    }*/
+    }
 }

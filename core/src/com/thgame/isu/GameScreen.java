@@ -35,7 +35,6 @@ public class GameScreen implements Screen {
 
     @Override
     public void pause() {
-        Gdx.app.log("Gamescreen", "pause called");
         //Save.save();
     }
 
