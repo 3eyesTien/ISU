@@ -1,0 +1,47 @@
+
+pack.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+fontsheet
+  rotate: false
+  xy: 1, 109
+  size: 252, 400
+  orig: 252, 400
+  offset: 0, 0
+  index: -1
+isu
+  rotate: false
+  xy: 1, 5
+  size: 298, 102
+  orig: 298, 102
+  offset: 0, 0
+  index: -1
+dark
+  rotate: false
+  xy: 1, 1
+  size: 2, 2
+  orig: 2, 2
+  offset: 0, 0
+  index: -1
+light
+  rotate: false
+  xy: 255, 507
+  size: 2, 2
+  orig: 2, 2
+  offset: 0, 0
+  index: -1
+vtdark
+  rotate: false
+  xy: 5, 1
+  size: 2, 2
+  orig: 2, 2
+  offset: 0, 0
+  index: -1
+vtlight
+  rotate: false
+  xy: 255, 503
+  size: 2, 2
+  orig: 2, 2
+  offset: 0, 0
+  index: -1
