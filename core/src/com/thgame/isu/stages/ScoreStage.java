@@ -29,7 +29,7 @@ public class ScoreStage extends Stage {
             cam.unproject(mouse, gamePort.getScreenX(), gamePort.getScreenY(), gamePort.getScreenWidth(), gamePort.getScreenHeight());
 
             if (nextButton.contains(mouse.x, mouse.y)) {
-                gm.setStage(new TransitionStage(gm, this, new MenuStage(gm), TransitionStage.Type.EXPAND));
+                gm.setStage(new TransitionStage(gm, this, new MenuStage(gm), TransitionStage.Type.BLACK_FADE));
             }
         }
     }

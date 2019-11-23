@@ -233,7 +233,7 @@ public class PlayStage extends Stage{
             cam.unproject(mouse, gamePort.getScreenX(), gamePort.getScreenY(), gamePort.getScreenWidth(), gamePort.getScreenHeight());
 
             if (backButton.contains(mouse.x, mouse.y)) {
-                gm.setStage(new TransitionStage(gm, this, new DifficultyStage(gm), TransitionStage.Type.EXPAND));
+                gm.setStage(new TransitionStage(gm, this, new DifficultyStage(gm), TransitionStage.Type.BLACK_FADE));
             }
 
             for (int i = 0; i < MAX_TOUCH; i++) {
