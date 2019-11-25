@@ -35,7 +35,7 @@ public class DifficultyStage extends Stage{
                 }
             }
             if(back.contains(mouse.x, mouse.y)){
-                gm.setStage(new TransitionStage(gm, this, new MenuStage(gm), TransitionStage.Type.EXPAND));
+                gm.setStage(new TransitionStage(gm, this, new MenuStage(gm), TransitionStage.Type.BLACK_FADE));
             }
         }
     }
