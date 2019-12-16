@@ -16,6 +16,8 @@ public class Content {
         atlases = new HashMap<String, TextureAtlas>();
         pref = Gdx.app.getPreferences("ISU");
 
+        //Load music here
+
         if(!pref.contains("easyScore")){
             pref.putInteger("easyScore", 0);
         }
