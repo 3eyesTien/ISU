@@ -251,11 +251,14 @@ public class PlayStage extends Stage{
                             tiles[row][col].setErrorSelection(true);
                             int decrement = -5;
                             score.incrementValue(decrement);
+                            Content.playIncorrect();
+
                         } else if (targets.contains(tiles[row][col], true)) {
                             tiles[row][col].setSolution(false);
                             tiles[row][col].setLitUp(false);
                             int increment = (int) (tiles[row][col].getLifeSpan() * 5);  // Increment score by the lifespan that's left * 5
                             score.incrementValue(increment);
+                            Content.playCorrect();
                             glows.add(new SelectionGlow(tiles[row][col].getX(), tiles[row][col].getY(), tileSize, tileSize));
 
                             targets.removeValue(tiles[row][col], true);

@@ -2,6 +2,7 @@ package com.thgame.isu.handler;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Preferences;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 
 import java.util.HashMap;
@@ -11,12 +12,16 @@ public class Content {
     private static HashMap<String, TextureAtlas> atlases;
 
     public static Preferences pref;
+    public static Sound correct;
+    public static Sound incorrect;
 
     public static void init(){
         atlases = new HashMap<String, TextureAtlas>();
         pref = Gdx.app.getPreferences("ISU");
 
-        //Load music here
+        //Load music and sounds here
+        correct = Gdx.audio.newSound(Gdx.files.internal("Bells_high.wav"));
+        incorrect = Gdx.audio.newSound(Gdx.files.internal("Bells_low.wav"));
 
         if(!pref.contains("easyScore")){
             pref.putInteger("easyScore", 0);
@@ -68,6 +73,19 @@ public class Content {
 
     public static TextureAtlas getAtlas(String key) {
         return atlases.get(key);
+    }
+
+    public static void playCorrect(){
+        correct.play(0.5f);
+    }
+
+    public static void playIncorrect(){
+        incorrect.play(0.5f);
+    }
+
+    public void dispose(){
+        correct.dispose();
+        incorrect.dispose();
     }
 }
 
