@@ -43,6 +43,7 @@ public class ISU extends ApplicationAdapter {
 		Content.loadAtlas("pack.pack", "pack");
 		//resource = new Content();
 		//resource.loadAtlas("pack.pack", "pack");
+		//Content.playMusic();
 
 		batch = new SpriteBatch();
 
