@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.thgame.isu.GameManager;
 import com.thgame.isu.ISU;
+import com.thgame.isu.handler.Content;
 import com.thgame.isu.ui.TextImage;
 
 public class ScoreStage extends Stage {
@@ -29,6 +30,7 @@ public class ScoreStage extends Stage {
             cam.unproject(mouse, gamePort.getScreenX(), gamePort.getScreenY(), gamePort.getScreenWidth(), gamePort.getScreenHeight());
 
             if (nextButton.contains(mouse.x, mouse.y)) {
+                Content.playCorrect();
                 gm.setStage(new TransitionStage(gm, this, new MenuStage(gm), TransitionStage.Type.BLACK_FADE));
             }
         }

@@ -53,13 +53,16 @@ public class MenuStage extends Stage {
             mouse.y = Gdx.input.getY();
             cam.unproject(mouse, gamePort.getScreenX(), gamePort.getScreenY(), gamePort.getScreenWidth(), gamePort.getScreenHeight());
             if(play.contains(mouse.x, mouse.y)){
+                Content.playCorrect();
                 gm.setStage(new TransitionStage(gm, this, new DifficultyStage(gm), TransitionStage.Type.BLACK_FADE));
             }
 
-            if(scores.contains(mouse.x, mouse.y))
+            if(scores.contains(mouse.x, mouse.y)) {
+                Content.playCorrect();
                 gm.setStage(new TransitionStage(gm, this, new HighScoreStage(gm, Save.getDifficultyScores()), TransitionStage.Type.BLACK_FADE));
-
+            }
             if(tutorial.contains(mouse.x, mouse.y)){
+                Content.playCorrect();
                 gm.setStage(new TransitionStage(gm, this, new TutorialStage(gm), TransitionStage.Type.BLACK_FADE));
             }
         }

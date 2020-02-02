@@ -15,6 +15,7 @@ public class Content {
     public static Preferences pref;
     public static Sound correct;
     public static Sound incorrect;
+    public static Sound back;
     //public static Music music;
 
     public static void init(){
@@ -22,8 +23,9 @@ public class Content {
         pref = Gdx.app.getPreferences("ISU");
 
         //Load music and sounds here
-        correct = Gdx.audio.newSound(Gdx.files.internal("Bells_high.wav"));
-        incorrect = Gdx.audio.newSound(Gdx.files.internal("Bells_low.wav"));
+        correct = Gdx.audio.newSound(Gdx.files.internal("correct.wav"));
+        incorrect = Gdx.audio.newSound(Gdx.files.internal("incorrect.wav"));
+        back = Gdx.audio.newSound(Gdx.files.internal("Bells_low.wav"));
         //music = Gdx.audio.newMusic(Gdx.files.internal("light_ride.wav"));
 
         if(!pref.contains("easyScore")){
@@ -86,6 +88,7 @@ public class Content {
         incorrect.play(0.5f);
     }
 
+    public static void playBack(){ back.play(0.5f);}
     /*
     public static void playMusic(){
         music.setVolume(0.5f);

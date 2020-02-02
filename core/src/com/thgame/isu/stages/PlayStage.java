@@ -233,6 +233,7 @@ public class PlayStage extends Stage{
             cam.unproject(mouse, gamePort.getScreenX(), gamePort.getScreenY(), gamePort.getScreenWidth(), gamePort.getScreenHeight());
 
             if (backButton.contains(mouse.x, mouse.y)) {
+                Content.playBack();
                 gm.setStage(new TransitionStage(gm, this, new DifficultyStage(gm), TransitionStage.Type.EXPAND));
             }
 

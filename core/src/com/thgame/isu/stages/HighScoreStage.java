@@ -43,6 +43,7 @@ public class HighScoreStage extends Stage {
             mouse.y = Gdx.input.getY();
             cam.unproject(mouse, gamePort.getScreenX(), gamePort.getScreenY(), gamePort.getScreenWidth(), gamePort.getScreenHeight());
             if(back.contains(mouse.x, mouse.y)){
+                Content.playBack();
                 gm.setStage(new TransitionStage(gm, this, new MenuStage(gm), TransitionStage.Type.BLACK_FADE));
             }
         }
